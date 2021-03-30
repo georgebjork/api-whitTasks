@@ -1,8 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>api_whitTasks</RootNamespace>
+    <UserSecretsId>a53777ac-ba17-49b4-a100-9f02a8ef947c</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

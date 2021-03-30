@@ -30,8 +30,12 @@ namespace api_whitTasks
         {
             services.AddMvc(options => options.EnableEndpointRouting = false);
             
-            var connStrings = Configuration.GetSection("ConnectionStrings");
-            Database.DatabaseConnection.ConnectionString = connStrings["Database"];
+            //var connStrings = Configuration.GetSection("ConnectionStrings");
+           // Database.DatabaseConnection.ConnectionString = connStrings["Database"];
+
+
+           //This is using user secrects
+           Database.DatabaseConnection.ConnectionString = Configuration["ConnectionStrings:whitTasksDB"];
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
