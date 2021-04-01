@@ -8,7 +8,7 @@ namespace api_whitTasks.Controllers
     [ApiController]
     public class TaskController : ControllerBase
     {
-        [Route("api/task")]
+        [Route("api/tasks")]
         public ActionResult<List<Task>> Get()
         {
             return Task.GetTask();

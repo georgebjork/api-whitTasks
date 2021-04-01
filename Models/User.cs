@@ -30,6 +30,12 @@ namespace api_whitTasks.Models
             return User.Fill(ds);
         }
 
+        public static List<User> GetUser(int id)
+        {
+            var ds = new Database().GetUser(id);
+            return User.Fill(ds);
+        }
+
 
         public static List<User> Fill(DataSet ds)
         {
