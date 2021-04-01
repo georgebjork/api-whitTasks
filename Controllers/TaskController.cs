@@ -11,13 +11,23 @@ namespace api_whitTasks.Controllers
         [Route("api/tasks")]
         public ActionResult<List<Task>> Get()
         {
-            return Task.GetTask();
+            return Task.GetTaskList();
         }
 
         [Route("api/tasks/{id}")]
         public ActionResult<List<Task>> Get(int id)
         {
-            return Task.GetTask(id);
+            return Task.GetTaskList(id);
         }
+
+        #region Post Methods
+        [HttpPost]
+        [Route("api/tasks")]
+        public ActionResult<Task> addTask(Task task)
+        {
+            return Task.addTask(task);
+        }
+
+        #endregion
     }
 }

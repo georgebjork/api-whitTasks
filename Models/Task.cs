@@ -25,16 +25,19 @@ namespace api_whitTasks.Models
             this.delete = (bool) dr ["deleted"];
         }
 
-        public static List<Task> GetTask()
+        public static List<Task> GetTaskList()
         {
-            var ds = new Database().GetTask();
+            var ds = new Database().GetTaskList();
             return Task.Fill(ds);
         }
-        public static List<Task> GetTask(int id)
+
+        //Return all of the tasks based off of the users id
+        public static List<Task> GetTaskList(int id)
         {
-             var ds = new Database().GetTask(id);
+            var ds = new Database().GetTaskList(id);
             return Task.Fill(ds);
         }
+
         public static List<Task> Fill(DataSet ds)
         {
             var task = new List<Task>();
@@ -43,6 +46,12 @@ namespace api_whitTasks.Models
                 task.Add(new Task(dr));
             }
             return task;
+        }
+
+        public static Task addTask(Task task)
+        {
+            int id = new Database().AddTask(task);
+            return GetTaskList(id).FirstOrDefault();
         }
     }
 

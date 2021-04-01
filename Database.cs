@@ -40,11 +40,11 @@ namespace api_whitTasks
         }
 
 
-        internal DataSet GetTask()
+        internal DataSet GetTaskList()
         {
             return GetTaskDataSet("get_tasks");
         } 
-        internal DataSet GetTask(int id)
+        internal DataSet GetTaskList(int id)
         {
             object[] prms = {id};
             return GetTaskDataSet("get_task",prms);
@@ -52,6 +52,12 @@ namespace api_whitTasks
         internal DataSet GetUser()
         {
             return GetUserDataSet("get_users");
+        }
+
+        internal int AddTask(Task t)
+        {
+            object[] prms = {t.user_id, t.name};
+            return ExecuteScalar("add_player", prms);
         }
 
         internal DataSet GetUser(int id)
@@ -112,6 +118,15 @@ namespace api_whitTasks
                 }    
             }
             return sb.ToString();
+        }
+
+        internal int ExecuteScalar(string storedProcedure, object[] parameters)
+        {
+            SqlDataAdapter adp = new SqlDataAdapter("exec " + storedProcedure + BuildParameters(parameters), cstr);          
+            var ds = new DataSet();
+            adp.Fill(ds);
+            int val = (int)ds.Tables[0].Rows[0][0];
+            return val;
         }
     }
 }
