@@ -30,6 +30,11 @@ namespace api_whitTasks.Models
             var ds = new Database().GetTask();
             return Task.Fill(ds);
         }
+        public static List<Task> GetTask(int id)
+        {
+             var ds = new Database().GetTask(id);
+            return Task.Fill(ds);
+        }
         public static List<Task> Fill(DataSet ds)
         {
             var task = new List<Task>();

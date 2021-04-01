@@ -44,7 +44,11 @@ namespace api_whitTasks
         {
             return GetTaskDataSet("get_tasks");
         } 
-
+        internal DataSet GetTask(int id)
+        {
+            object[] prms = {id};
+            return GetTaskDataSet("get_task",prms);
+        }
         internal DataSet GetUser()
         {
             return GetUserDataSet("get_users");
@@ -62,7 +66,12 @@ namespace api_whitTasks
             //SetCourseDataSet(ref ds);
             return ds;
         }
-
+        internal DataSet GetTaskDataSet(string storedProcedure, object[]prms)
+        {
+            var ds = GetDataSet(storedProcedure, prms);
+            //SetCourseDataSet(ref ds);
+            return ds;
+        } 
         internal DataSet GetUserDataSet(string storedProcedure)
         {
             var ds = GetDataSet(storedProcedure);

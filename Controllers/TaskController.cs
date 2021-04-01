@@ -14,5 +14,10 @@ namespace api_whitTasks.Controllers
             return Task.GetTask();
         }
 
+        [Route("api/tasks/{id}")]
+        public ActionResult<List<Task>> Get(int id)
+        {
+            return Task.GetTask(id);
+        }
     }
 }
