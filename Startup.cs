@@ -52,7 +52,7 @@ namespace api_whitTasks
             {
                 app.UseHsts();
             }
-            //app.UseCors("api-CORS");
+            app.UseCors("api-CORS");
 
             app.UseHttpsRedirection();
             app.UseMvc();

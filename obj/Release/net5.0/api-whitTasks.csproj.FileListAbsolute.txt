@@ -140,3 +140,6 @@ C:\Users\georg\Documents\Code\WhitTasks\api-whitTasks\obj\Release\net5.0\api-whi
 C:\Users\georg\Documents\Code\WhitTasks\api-whitTasks\obj\Release\net5.0\ref\api-whitTasks.dll
 C:\Users\georg\Documents\Code\WhitTasks\api-whitTasks\obj\Release\net5.0\api-whitTasks.pdb
 C:\Users\georg\Documents\Code\WhitTasks\api-whitTasks\obj\Release\net5.0\api-whitTasks.genruntimeconfig.cache
+C:\Users\georg\Documents\Code\WhitTasks\api-whitTasks\bin\Release\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\georg\Documents\Code\WhitTasks\api-whitTasks\bin\Release\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\georg\Documents\Code\WhitTasks\api-whitTasks\bin\Release\net5.0\Newtonsoft.Json.Bson.dll

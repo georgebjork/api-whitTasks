@@ -5,6 +5,8 @@ C:\Users\georg\Documents\Code\WhitTasks\api-whitTasks\bin\Release\net5.0\publish
 C:\Users\georg\Documents\Code\WhitTasks\api-whitTasks\bin\Release\net5.0\publish\api-whitTasks.runtimeconfig.json
 C:\Users\georg\Documents\Code\WhitTasks\api-whitTasks\bin\Release\net5.0\publish\api-whitTasks.pdb
 C:\Users\georg\Documents\Code\WhitTasks\api-whitTasks\bin\Release\net5.0\publish\Humanizer.dll
+C:\Users\georg\Documents\Code\WhitTasks\api-whitTasks\bin\Release\net5.0\publish\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\georg\Documents\Code\WhitTasks\api-whitTasks\bin\Release\net5.0\publish\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\georg\Documents\Code\WhitTasks\api-whitTasks\bin\Release\net5.0\publish\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\georg\Documents\Code\WhitTasks\api-whitTasks\bin\Release\net5.0\publish\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\georg\Documents\Code\WhitTasks\api-whitTasks\bin\Release\net5.0\publish\Microsoft.CodeAnalysis.dll
@@ -35,6 +37,7 @@ C:\Users\georg\Documents\Code\WhitTasks\api-whitTasks\bin\Release\net5.0\publish
 C:\Users\georg\Documents\Code\WhitTasks\api-whitTasks\bin\Release\net5.0\publish\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 C:\Users\georg\Documents\Code\WhitTasks\api-whitTasks\bin\Release\net5.0\publish\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 C:\Users\georg\Documents\Code\WhitTasks\api-whitTasks\bin\Release\net5.0\publish\Newtonsoft.Json.dll
+C:\Users\georg\Documents\Code\WhitTasks\api-whitTasks\bin\Release\net5.0\publish\Newtonsoft.Json.Bson.dll
 C:\Users\georg\Documents\Code\WhitTasks\api-whitTasks\bin\Release\net5.0\publish\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\georg\Documents\Code\WhitTasks\api-whitTasks\bin\Release\net5.0\publish\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\georg\Documents\Code\WhitTasks\api-whitTasks\bin\Release\net5.0\publish\Swashbuckle.AspNetCore.SwaggerUI.dll
