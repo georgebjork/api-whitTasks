@@ -24,10 +24,12 @@ namespace api_whitTasks.Controllers
         [HttpPost]
         //[EnableCors("api-CORS")]
         [Route("api/tasks")]
-        public ActionResult<Task> addTask(Task task)
+        public ActionResult<Task> addTask([FromBody] Task task)
         {
             //Create a task with the vars being passed in
+            //Task task = new Task(t, id);
             return Task.addTask(task);
+            
         }
 
         #endregion

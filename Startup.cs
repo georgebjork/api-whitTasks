@@ -34,10 +34,10 @@ namespace api_whitTasks
             
             var connStrings = Configuration.GetSection("ConnectionStrings");
            // Database.DatabaseConnection.ConnectionString = connStrings["Database"];
-
-
-           //This is using user secrects
+            //This is using user secrects
            Database.DatabaseConnection.ConnectionString = connStrings["whitTasksDB"];
+
+            services.AddRazorPages().AddNewtonsoftJson();//this is important
         }
 
         
@@ -52,10 +52,9 @@ namespace api_whitTasks
             {
                 app.UseHsts();
             }
-            app.UseCors("api-CORS");
+            //app.UseCors("api-CORS");
 
             app.UseHttpsRedirection();
-
             app.UseMvc();
         }
     }

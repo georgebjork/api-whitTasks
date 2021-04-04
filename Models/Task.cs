@@ -6,6 +6,7 @@ using System.Linq;
 
 namespace api_whitTasks.Models
 {
+    [Serializable]
     public class Task
     {
         public long task_id { get; set; }
@@ -15,6 +16,12 @@ namespace api_whitTasks.Models
         public bool delete { get; set; }
 
         public Task(){}
+
+        public Task(string task, int id)
+        {
+            name = task;
+            user_id = id;
+        }
 
         public Task(DataRow dr)
         {

@@ -57,7 +57,7 @@ namespace api_whitTasks
         internal int AddTask(Task t)
         {
             object[] prms = {t.user_id, t.name};
-            return ExecuteScalar("add_player", prms);
+            return ExecuteScalar("add_task", prms);
         }
 
         internal DataSet GetUser(int id)
