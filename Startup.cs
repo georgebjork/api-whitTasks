@@ -29,6 +29,8 @@ namespace api_whitTasks
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc(options => options.EnableEndpointRouting = false);
+
+             services.AddCors(options => options.AddPolicy("api-CORS", p => p.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()));
             
             var connStrings = Configuration.GetSection("ConnectionStrings");
            // Database.DatabaseConnection.ConnectionString = connStrings["Database"];
@@ -38,6 +40,7 @@ namespace api_whitTasks
            Database.DatabaseConnection.ConnectionString = connStrings["whitTasksDB"];
         }
 
+        
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -49,6 +52,7 @@ namespace api_whitTasks
             {
                 app.UseHsts();
             }
+            app.UseCors("api-CORS");
 
             app.UseHttpsRedirection();
 

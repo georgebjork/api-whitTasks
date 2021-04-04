@@ -12,7 +12,7 @@ namespace api_whitTasks.Controllers
         public ActionResult<List<User>> Get()
         {
             
-            return api_whitTasks.Models.User.GetUser();;
+            return api_whitTasks.Models.User.GetUser();
         }
 
         [Route("api/users/{id}")]
