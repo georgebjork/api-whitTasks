@@ -66,6 +66,12 @@ namespace api_whitTasks
             return ExecuteScalar("add_task", prms);
         }
 
+        internal int UpdateTask(Task taskToUpdate)
+        {
+            object[] prms = {taskToUpdate.task_id, taskToUpdate.name, taskToUpdate.delete, taskToUpdate.done};
+            return ExecuteScalar("update_task", prms);
+        }
+
         internal DataSet GetUser(int id)
         {
             object[] prms = { id };
@@ -95,6 +101,15 @@ namespace api_whitTasks
         {
             var ds = GetDataSet(storedProcedure, prms);
             return ds;
+        }
+
+        internal int ExecuteScalar(string storedProcedure, object[] parameters)
+        {
+            SqlDataAdapter adp = new SqlDataAdapter("exec " + storedProcedure + BuildParameters(parameters), cstr);          
+            var ds = new DataSet();
+            adp.Fill(ds);
+            int val = (int)ds.Tables[0].Rows[0][0];
+            return val;
         }
         
         internal string BuildParameters(object[] prms)
@@ -126,13 +141,6 @@ namespace api_whitTasks
             return sb.ToString();
         }
 
-        internal int ExecuteScalar(string storedProcedure, object[] parameters)
-        {
-            SqlDataAdapter adp = new SqlDataAdapter("exec " + storedProcedure + BuildParameters(parameters), cstr);          
-            var ds = new DataSet();
-            adp.Fill(ds);
-            int val = (int)ds.Tables[0].Rows[0][0];
-            return val;
-        }
+        
     }
 }

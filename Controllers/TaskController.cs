@@ -23,7 +23,7 @@ namespace api_whitTasks.Controllers
 
         [Route("api/task/{task_id}")]
         //Return a single task by the task id
-        public ActionResult<Task> GetTask(int task_id)
+        public Task GetTask(int task_id)
         {
             return Task.GetTask(task_id);
         }
@@ -42,8 +42,8 @@ namespace api_whitTasks.Controllers
 
         #endregion
 
-        #region Put Mehods
-        [HttpPost]
+        #region Put Methods
+        [HttpPut]
         [Route("api/tasks/{id}")]
 
         public ActionResult<Task> editTask(int id, [FromBody] Task task)
@@ -53,9 +53,15 @@ namespace api_whitTasks.Controllers
             {
                 return BadRequest("the object given is null");
             }
-            //Task task1 = this.GetTask(id);
 
-
+            //We want to check that that task was want to update has the same id that passed in.
+            Task taskToUpdate = this.GetTask(id);
+            if(task.task_id == taskToUpdate.task_id)
+            {
+                Task.updateTask(task);
+            }
+            
+           
 
             return NoContent();
         }

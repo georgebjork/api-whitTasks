@@ -67,6 +67,12 @@ namespace api_whitTasks.Models
             int id = new Database().AddTask(task);
             return GetTaskList(id).FirstOrDefault();
         }
+
+        public static Task updateTask(Task taskToUpdate)
+        {
+            int task_id = new Database().UpdateTask(taskToUpdate);
+            return GetTask(task_id);
+        }
     }
 
 
