@@ -44,7 +44,7 @@ namespace api_whitTasks.Controllers
 
         #region Put Methods
         [HttpPut]
-        [Route("api/tasks/{id}")]
+        [Route("api/task/update/{id}")]
 
         public ActionResult<Task> editTask(int id, [FromBody] Task task)
         {
