@@ -45,6 +45,13 @@ namespace api_whitTasks.Models
             return Task.Fill(ds);
         }
 
+        //Return a single task based off of a task id
+        public static Task GetTask(int task_id)
+        {
+            var ds = new Database().GetTask(task_id);
+            return Task.Fill(ds).FirstOrDefault();
+        }
+
         public static List<Task> Fill(DataSet ds)
         {
             var task = new List<Task>();

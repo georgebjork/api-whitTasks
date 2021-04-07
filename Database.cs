@@ -49,6 +49,12 @@ namespace api_whitTasks
             object[] prms = {id};
             return GetTaskDataSet("get_task",prms);
         }
+
+        internal DataSet GetTask(int task_id)
+        {
+            object[] prms = {task_id};
+            return GetTaskDataSet("get_task_taskid", prms);
+        }
         internal DataSet GetUser()
         {
             return GetUserDataSet("get_users");
