@@ -72,6 +72,12 @@ namespace api_whitTasks
             return ExecuteScalar("update_task", prms);
         }
 
+        internal int DeleteTask(Task taskToDelete)
+        {
+            object[] prms = {taskToDelete.task_id};
+            return ExecuteScalar("delete_task", prms);
+        }
+
         internal DataSet GetUser(int id)
         {
             object[] prms = { id };

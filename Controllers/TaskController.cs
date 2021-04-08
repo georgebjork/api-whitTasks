@@ -67,5 +67,19 @@ namespace api_whitTasks.Controllers
         }
 
         #endregion
+
+        #region DELETE Methods
+        [HttpDelete]
+        [Route("api/task/{id}")]
+
+        public ActionResult<Task> deleteTask(int id)
+        {
+            Task taskToDelete = Task.GetTask(id);
+            Task.deleteTask(taskToDelete);
+
+            return NoContent();
+        }
+
+        #endregion
     }
 }

@@ -73,6 +73,11 @@ namespace api_whitTasks.Models
             int task_id = new Database().UpdateTask(taskToUpdate);
             return GetTask(task_id);
         }
+
+        public static void deleteTask(Task taskToDelete)
+        {
+            int task_id = new Database().DeleteTask(taskToDelete);
+        }
     }
 
 
