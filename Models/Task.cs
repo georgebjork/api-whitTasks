@@ -14,6 +14,7 @@ namespace api_whitTasks.Models
         public string name { get; set; }
         public bool done { get; set; }
         public bool delete { get; set; }
+        public DateTime due_date { get; set; }
 
         public Task(){}
 
@@ -30,6 +31,7 @@ namespace api_whitTasks.Models
             this.name = (string)dr["name"];
             this.done = (bool) dr ["done"];
             this.delete = (bool) dr ["deleted"];
+            this.due_date = (DateTime) dr["due_date"];
         }
 
         public static List<Task> GetTaskList()
