@@ -50,5 +50,17 @@ namespace api_whitTasks.Models
             }
             return user;
         }
+
+        //This function given a user will retrive all users from a data base and see if it finds a matching username and password. If it does it will the user from the database
+        public static User checkLogin(User u)
+        {
+            List<User> users = GetUser();
+            for(int i = 0; i < users.Count(); i++){
+                if(users[i].email == u.email && users[i].password == u.password)
+                    return users[i];
+            }
+
+            return u;
+        }
     }
 }

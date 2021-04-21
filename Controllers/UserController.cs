@@ -21,5 +21,19 @@ namespace api_whitTasks.Controllers
             return api_whitTasks.Models.User.GetUser(id);
         }
 
+        #region Post Methods
+        [HttpPost]
+        [Route("api/users/login")]
+        public ActionResult<User> Login(User u)
+        {
+            User userToFind = api_whitTasks.Models.User.checkLogin(u);
+            if(userToFind == u){
+                return NotFound();
+            }
+            return userToFind;
+        }
+
+        #endregion
+
     }
 }
